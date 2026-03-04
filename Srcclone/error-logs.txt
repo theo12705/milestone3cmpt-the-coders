@@ -1,0 +1,48 @@
+Error traces from 'six' 'numpy' and CRANN not functioning properly.
+
+(.venv) theo@Theo:/mnt/c/cmpt470/srcClone$ python3 srcClone.py Clone0 Clone0-1
+Traceback (most recent call last):
+  File "/mnt/c/cmpt470/srcClone/srcClone.py", line 5, in <module>
+    from crANN import CRANN
+  File "/mnt/c/cmpt470/srcClone/crANN.py", line 1, in <module>
+    import lshash
+  File "/mnt/c/cmpt470/srcClone/lshash.py", line 17, in <module>
+    import six  # noqa
+    ^^^^^^^^^^
+ModuleNotFoundError: No module named 'six'
+(.venv) theo@Theo:/mnt/c/cmpt470/srcClone$ python3 -m pip install six
+Collecting six
+  Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Installing collected packages: six
+Successfully installed six-1.17.0
+(.venv) theo@Theo:/mnt/c/cmpt470/srcClone$ python3 srcClone.py Clone0 Clone0-1
+Traceback (most recent call last):
+  File "/mnt/c/cmpt470/srcClone/srcClone.py", line 5, in <module>
+    from crANN import CRANN
+  File "/mnt/c/cmpt470/srcClone/crANN.py", line 1, in <module>
+    import lshash
+  File "/mnt/c/cmpt470/srcClone/lshash.py", line 21, in <module>
+    import numpy as np
+ModuleNotFoundError: No module named 'numpy'
+(.venv) theo@Theo:/mnt/c/cmpt470/srcClone$ python3 -m pip install numpy
+Collecting numpy
+  Using cached numpy-2.4.2-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+Using cached numpy-2.4.2-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.6 MB)
+Installing collected packages: numpy
+Successfully installed numpy-2.4.2
+(.venv) theo@Theo:/mnt/c/cmpt470/srcClone$ python3 srcClone.py Clone0 Clone0-1
+/bin/sh: 1: srcml: not found
+/bin/sh: 1: srcslice: not found
+/bin/sh: 1: srcslice: not found
+/bin/sh: 1: srcml: not found
+Traceback (most recent call last):
+  File "/mnt/c/cmpt470/srcClone/srcClone.py", line 61, in <module>
+    main(sys.argv[1], sys.argv[2])
+  File "/mnt/c/cmpt470/srcClone/srcClone.py", line 49, in main
+    crANN = CRANN(slicing_vectors_1)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/cmpt470/srcClone/crANN.py", line 14, in __init__
+    self.MAX = len(self.vectors[0])
+                   ~~~~~~~~~~~~^^^
+IndexError: list index out of range

@@ -1,0 +1,14 @@
+This is their pre-existing test, it doesnt use C so its not very useful in terms of
+the C based srcClone.
+
+theo@Theo:/mnt/c/cmpt470/srcClone$ python3 runtest.py 2>/dev/null
+python3 srcClone.py ./test/pairs/20601756.java ./test/pairs/23594635.java
+python3 srcClone.py ./test/pairs/8001867.java ./test/pairs/23594635.java
+python3 srcClone.py ./test/pairs/15537156.java ./test/pairs/23594635.java
+python3 srcClone.py ./test/pairs/20619879.java ./test/pairs/23594635.java
+python3 srcClone.py ./test/pairs/16499420.java ./test/pairs/23594635.java
+python3 srcClone.py ./test/pairs/3282600.java ./test/pairs/20924120.java
+python3 srcClone.py ./test/pairs/7926874.java ./test/pairs/14033995.java
+python3 srcClone.py ./test/pairs/4209926.java ./test/pairs/22323983.java
+python3 srcClone.py ./test/pairs/2270320.java ./test/pairs/2816076.java
+python3 srcClone.py ./test/pairs/1760180.java ./test/pairs/7582861.java

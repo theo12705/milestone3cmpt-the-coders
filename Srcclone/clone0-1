@@ -1,0 +1,15 @@
+int main (void) {
+    int tree [3] = {0};
+    int max = 0;
+    int cut = 0;
+    printf ("Max Height: "), scanf ("%d", &max);
+    for (int i = 0; i < 3; ++i) {
+        printf ("Tree%d: ", i +1), scanf ("%d", &tree[i]);
+    }
+    for (int i = 0; i < 3; ++i) {
+        cut += (tree[i] % max) % tree[i];
+    }
+    printf ("Amount to remove: %d\n", cut);
+    getchar ();
+    return 0;
+}
