@@ -76,12 +76,13 @@ BUILD SUCCESSFUL in 1m 49s
 ```
 ## Benchmark(s) used:
 
-[BigCloneBench](https://huggingface.co/datasets/google/code_x_glue_cc_clone_detection_big_clone_bench)
+[BigCloneEval](https://github.com/jeffsvajlenko/BigCloneEval/blob/master/ReadMe.md#installation-and-setup)
 
 [Paper](https://ieeexplore.ieee.org/abstract/document/6976121)
 
-Downloaded the [BigCloneBench](https://github.com/clonebench/BigCloneBench?tab=readme-ov-file)  
-Data [here](https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaFhiTTZNS3RfeUxqX3RrMjlHSm5jOUJLb0l2Q2c%5FZT1vVlRWSm0&cid=8BFCB70AA333DB15&id=8BFCB70AA333DB15%21261604&parId=8BFCB70AA333DB15%21260467&o=OneUp)
+BigCloneBench Data [here](https://1drv.ms/u/s!AhXbM6MKt_yLj_NwwVacvUzmi6uorA?e=eMu0P4)
+
+IJaDataset Data [here](https://1drv.ms/u/s!AhXbM6MKt_yLj_N15CewgjM7Y8NLKA?e=cScoRJ)
 
 ## Any interventions performed:
 
