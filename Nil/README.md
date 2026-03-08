@@ -1,24 +1,94 @@
-# milestone3cmpt-the-coders
-Milestone 3 for team the coders
+# Milestone 3: CMPT – The Coders
 
-Nil
-Ran by:
+## NIL
+**Ran by:** Quinn  
 
-Please fill this in:
+[Paper](https://dl.acm.org/doi/epdf/10.1145/3468264.3468564)
 
+**Repository:** [https://github.com/kusumotolab/NIL](https://github.com/kusumotolab/NIL)
 
-How the official artifact was discovered:
+---
 
-Environment setup details:
+## How the official artifact was discovered
 
-Installation and execution steps:
+The official implementation of NIL was located by searching for the paper title  
+**"NIL: Large-Scale Detection of Large-Variance Clones"** along with the keyword *GitHub*.  
 
-Benchmark(s) used:
+This repository ([https://github.com/kusumotolab/NIL](https://github.com/kusumotolab/NIL)) is maintained by Tasuku Nakagawa ([https://github.com/T45K](https://github.com/T45K)), one of the authors of the paper ([official paper](https://dl.acm.org/doi/epdf/10.1145/3468264.3468564)).  
 
-Any interventions performed:
+The repository contains the source code for the NIL clone detection tool but does not include packaged datasets, or a complete reproducibility environment.  
 
-Execution outcome and TES classification:
+The artifact was accessible as of **March 2026**, and the repository was successfully cloned.
+
+---
+
+## Environment setup details
+
+The tool is implemented in **Java** and built using **Gradle**.  
+
+Ran locally on my device:  
+
+- **OS:** macOS 24.6.0  
+- **Architecture:** x86_64  
+- **CPU:** Intel i5  
+- **RAM:** 8 GB  
+- **Java:** OpenJDK 21.0.1  
+
+---
+
+## Installation and execution steps
+
+### First Attempt – Failed
+
+```bash
+git clone https://github.com/kusumotolab/NIL.git
+cd NIL
+./gradlew build
+```
+
+Output:
+```
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by net.rubygrapefruit.platform.internal.NativeLibraryLoader
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+25.0.1
+
+java.lang.IllegalArgumentException: 25.0.1
+    at org.jetbrains.kotlin.com.intellij.util.lang.JavaVersion.parse(JavaVersion.java:307)
+    at org.jetbrains.kotlin.com.intellij.util.lang.JavaVersion.current(JavaVersion.java:176)
+    at org.jetbrains.kotlin.cli.jvm.modules.JavaVersionUtilsKt.isAtLeastJava9(javaVersionUtils.kt:11)
+```
+From this, it was assumed the issue was due to the Java version. A downgrade was attempted.
+
+**Solution**
+
+Installed JDK 21 via Homebrew:
+```brew install openjdk@21```
+
+**Build Successful:**
+```
+BUILD SUCCESSFUL in 1m 49s
+13 actionable tasks: 13 executed
+```
+## Benchmark(s) used:
+
+[BigCloneBench](https://huggingface.co/datasets/google/code_x_glue_cc_clone_detection_big_clone_bench)
+
+[Paper](https://ieeexplore.ieee.org/abstract/document/6976121)
+
+Downloaded the [BigCloneBench](https://github.com/clonebench/BigCloneBench?tab=readme-ov-file)  
+Data [here](https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBaFhiTTZNS3RfeUxqX3RrMjlHSm5jOUJLb0l2Q2c%5FZT1vVlRWSm0&cid=8BFCB70AA333DB15&id=8BFCB70AA333DB15%21261604&parId=8BFCB70AA333DB15%21260467&o=OneUp)
+
+## Any interventions performed:
+
+## Execution outcome and TES classification:
 
 
 WARNING/TODO:
 Don't forget to add logs, error traces and screenshots for any outcomes found. The more the merrier
+
+
