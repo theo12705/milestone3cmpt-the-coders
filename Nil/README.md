@@ -84,6 +84,22 @@ BigCloneBench Data [here](https://1drv.ms/u/s!AhXbM6MKt_yLj_NwwVacvUzmi6uorA?e=e
 
 IJaDataset Data [here](https://1drv.ms/u/s!AhXbM6MKt_yLj_N15CewgjM7Y8NLKA?e=cScoRJ)
 
+**WorkFlow:**
+Detect Clones with NIL tool
+
+```$ ./detectClones -m 2000 -r ../nilRunner.sh -o nil_clones.csv```
+.sh
+```java -jar ../NIL/build/libs/NIL-all.jar -s "$1" -bce 2>/dev/null```
+
+Import clones for BigCloneEval
+
+```./importClones -t 1 -c nil_clones.csv```
+
+Evaluate clones with BigCloneEval
+
+```./evaluateTool -t 1 -o report.txt --st BOTH --mil 6 --mip 6 --mit 50```
+
+
 ## Any interventions performed:
 
 ## Execution outcome and TES classification:
