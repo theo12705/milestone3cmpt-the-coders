@@ -3,9 +3,6 @@
 
 Ran by: Theo
 
-Please fill this in:
-
-
 # How the official artifact was discovered:
 
 There is no existing official artifact for this repo. Main linking used to find information on this paper was through IEEE:
@@ -59,7 +56,8 @@ Semantic clones: SemanticCloneBench: https://drive.google.com/file/d/1KicfslV02p
 
 My reason for semantic clones is as stated in the publication, srcClone was mainly
 used for type-4 clones and semantic clones closely links this in it's C/C++ code.
-Furthermore semantic clones has C code which can be executed theoritically.
+Furthermore semantic clones has C code which can be executed theoritically. They technically
+weren't ran but this would've been used had it functioned.
 
 # Any interventions performed:
 
@@ -80,14 +78,16 @@ Furthermore semantic clones has C code which can be executed theoritically.
 The initial attempt was using Clone0 from semantic clones and i broke it off into two
 functions so that it can 'detect the clone'. This wasn't functional as srcml no longer functions with this system.
 
-This was marked as TES-D even though the 'java' implementation tunfctions.
+
+
+# Execution outcome and TES classification:
+
+This was marked as TES-D even though the 'java' implementation test functions.
 'python3 runtest.py 2>/dev/null'
 
 The reason being this java is outside the scope of the original paper however, as their slicer was never designed to do anything but C/C++. The C code as described above was non-functional and thus it gets TES-D since technically this isn't a part of the official paper and the third party source code isn't functional, it would require major intervention outside the scope of the project, including a whole re-write of the slicer and srcml library usage.
 
 I've added my test data that I used to attempt to get it work in 'Clone0' and 'Clone-0-1'
-
-# Execution outcome and TES classification:
 
 I could only get the program to execute on it's basic tests that exists in the repo. I could not get it to activate on the semantic clones due to the complex parsing needed to get this working.
 
