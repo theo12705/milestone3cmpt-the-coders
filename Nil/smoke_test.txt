@@ -1,0 +1,35 @@
+Smoke Test
+
+$ java -jar build/libs/NIL-all.jar
+Exception in thread "main" jp.ac.osaka_u.sdl.nil.InvalidOptionException: -s must be specified.
+-s, --src                Source directory (must be specified)
+-mil, --min-line            Minimum line (default: 6)
+-mit, --min-token            Minimum token (default: 50)
+-n, --n-gram                N of N-gram (default: 5)
+-p, --partition-number            The number of partition (default: 10)   
+-f, --filtration-threshold        Filtration threshold (default: 10%)
+-v, --verification-threshold        Verification threshold (default: 70%)
+-o, --output                Output file name (default: result_{N-gram}_{filtering_threshold}_{verifying_threshold}.csv)
+-t, --threads                The number of threads used for parallel execution (default: all threads)
+-l, --language                Target language (default: java)
+-bce, --bigcloneeval            Output result feasible to BigCloneEval (default: false)
+-mif, --mutationinjectionframework    Output result feasible to MutationInjectionFramework (default: false)
+    at jp.ac.osaka_u.sdl.nil.NILConfigKt.parseArgs(NILConfig.kt:58)
+    at jp.ac.osaka_u.sdl.nil.NILMainKt.main(NILMain.kt:76)
+
+
+$ cat test/A.java
+class A { public static void main(String[] args){} }
+
+$ cat test/B.java
+class B { public static void main(String[] args){} }
+
+
+java -jar build/libs/NIL-all.jar -s test -mil 1 -mit 1 -p 1
+13:09:04.274 [main] INFO jp.ac.osaka_u.sdl.nil.NILMain -- Start
+13:09:04.878 [main] INFO jp.ac.osaka_u.sdl.nil.NILMain -- 2 code blocks have been extracted.
+13:09:04.886 [main] INFO jp.ac.osaka_u.sdl.nil.NILMain -- Partition 1: Index creation has been completed.
+13:09:04.903 [main] INFO jp.ac.osaka_u.sdl.nil.NILMain -- Partition 1: Clone detection has been completed.
+13:09:04.905 [main] INFO jp.ac.osaka_u.sdl.nil.NILMain -- End
+13:09:04.906 [main] INFO jp.ac.osaka_u.sdl.nil.NILMain -- time: 0s
+
