@@ -1,24 +1,17 @@
-# milestone3cmpt-the-coders
-Milestone 3 for team the coders
 
-Tcore
-Ran by: Leif Benson
+# Tcore
+**Ran by:** Leif Benson
 
-Please fill this in:
+## How the official artifact was discovered:
+**There was no tangible software artifact discovered.**
 
+## Environment setup details:
 
-How the official artifact was discovered:
+## Installation and execution steps:
 
-Environment setup details:
+## Benchmark(s) used:
 
-Installation and execution steps:
+## Any interventions performed:
+**Not available.**
 
-Benchmark(s) used:
-
-Any interventions performed:
-
-Execution outcome and TES classification:
-
-
-WARNING/TODO:
-Don't forget to add logs, error traces and screenshots for any outcomes found. The more the merrier
+## Execution outcome and TES classification:
