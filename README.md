@@ -20,3 +20,6 @@ Tested by: Quinn
 
 TCore: A novel approach for detecting type-iv clones in test code
 Tested by: Leif
+
+
+We added a CSV and XLSX file for your convenience, they are equivalent feel free to use whichever format is easier
