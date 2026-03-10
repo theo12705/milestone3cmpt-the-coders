@@ -10,15 +10,20 @@ https://scispace.com/pdf/gplag-detection-of-software-plagiarism-by-program-depen
 I was not able to find any source code through Google searches or by researching the paper's authors.
 
 I found 3 third-party remakes of GPLAG at the follow githubs:
-https://github.com/lyc8503/GPlag,
-https://github.com/vfrunza/GPLAG-Plagerism-Detection,
-https://github.com/Wancen/GPlag,
+
+https://github.com/lyc8503/GPlag
+
+https://github.com/vfrunza/GPLAG-Plagerism-Detection
+
+https://github.com/Wancen/GPlag
+
 
 Environment setup details:
 Windows 11 
 
 
 Installation and execution steps:
+
 https://github.com/lyc8503/GPlag
 - Download a zip of the code
 - Extracted the zip and open in the code in Visual Studio 
