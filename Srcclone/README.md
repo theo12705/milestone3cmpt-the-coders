@@ -11,8 +11,15 @@ There is no existing official artifact for this repo. Main linking used to find 
 Further research was done on both authors main  Hakam W. Alomari and Matthew Stephan
 but that did not bear fruit. Upon further research I discovered a program called srcVUL which was written by Hakam W. Alomari that used a similar PDG slicer as srcclone, however this was not EXACTLY the same as srcclone and I decided it was not worth pursuing due to it not being inherent to the paper. 
 
-Upon further research I found a thirdparty remake of srcClone:
+Upon further research I found a thirdparty remake of srcClone, this was by using 'srcClone repo' in google.
+I also tried 'srcCLone artifacts' and looked up 'Hakam W. Alomari website' and 'Matthew Stephan website'. Both of their websites/university front pages didn't bear any fruit.
 https://github.com/siriuswhiter/srcClone
+
+Hakam:
+https://miamioh.edu/profiles/cec/hakam-alomari.html
+
+Matthew:
+https://research.cs.queensu.ca/home/stephan/
 
 This was found through googling and therefore does not have any official linking between the two, it simply implies it is a third party remake using srcClones techniques. This was found by simply googling 'srcclone repo' and I found it.
 
@@ -37,7 +44,7 @@ Installation included the following steps, they aren't perfectly in order as deb
 walks through them more. I go in more detail in the "interventions" piece below.
 
 - Install the srcslice tar using tar-xvf
-- Download the srcslide tar vile
+- Download the srcslide tar file
 - Execute the srcslide make file using the guides for srcslide
 - fix any dependencies from above ^ (lib nlohmann, lhash3 )
 - Move srcslide tar into /bin and /share (install on linux)
@@ -56,7 +63,7 @@ Semantic clones: SemanticCloneBench: https://drive.google.com/file/d/1KicfslV02p
 
 My reason for semantic clones is as stated in the publication, srcClone was mainly
 used for type-4 clones and semantic clones closely links this in it's C/C++ code.
-Furthermore semantic clones has C code which can be executed theoritically. They technically
+Furthermore semantic clones has C code which can be executed theoretically. They technically
 weren't ran but this would've been used had it functioned.
 
 # Any interventions performed:
@@ -65,11 +72,9 @@ weren't ran but this would've been used had it functioned.
 - had to install numpy
 - had to install srcslice (not trivial)
 - had to install srcml (not trivial)
-
 - Had to install srcslice c++ binaries and 'make' them, this had some issues including improper libraries installed by default and not alerting the developer of these dependencies, I fixed them all manually including:
 - sudo apt install nlohmann-json3-dev
 - I also had to modify the cmake as it wasn't up to date with its library requirements.
-
 - Had to walk through and manually install srcml in /bin/ due to some conflictions on the initial compilation, I had to rewrite some of the make to get it work with my linux.
 
 - After executing the program with my dummy clone sourced from semantic clones: Here's the outcome that occured:
