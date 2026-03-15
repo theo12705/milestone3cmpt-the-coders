@@ -98,6 +98,4 @@ I could only get the program to execute on it's basic tests that exists in the r
 
 You can see my executions in the 'image.png' attached.
 
-WARNING/TODO:
-Don't forget to add logs, error traces and screenshots for any outcomes found. The more the merrier
 
