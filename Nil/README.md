@@ -73,30 +73,48 @@ BUILD SUCCESSFUL in 1m 49s
 ```
 ## Benchmark(s) used:
 
-This [BigCloneEval](https://github.com/jeffsvajlenko/BigCloneEval/blob/master/ReadMe.md#installation-and-setup) was located at [EXPERIMENT.md](https://github.com/kusumotolab/NIL/blob/master/EXPERIMENT.md) in the NIL repo. 
+This [BigCloneEval](https://github.com/jeffsvajlenko/BigCloneEval/blob/master/ReadMe.md#installation-and-setup) was located at [EXPERIMENT.md](https://github.com/kusumotolab/NIL/blob/master/EXPERIMENT.md) in the NIL repo. I followed the install steps and installed it in its own directory.
 
 The [paper](https://ieeexplore.ieee.org/abstract/document/6976121) was located in the [NIL](https://github.com/kusumotolab/NIL/blob/master/camera-ready.pdf) repo as well.
 
-Both of these data sets were located in [readme](https://github.com/jeffsvajlenko/BigCloneEval) of [BigCloneEval](https://github.com/jeffsvajlenko/BigCloneEval/blob/master/ReadMe.md#installation-and-setup).
+Both of these data sets were located in [readme](https://github.com/jeffsvajlenko/BigCloneEval) of [BigCloneEval](https://github.com/jeffsvajlenko/BigCloneEval/blob/master/ReadMe.md#installation-and-setup). I added both of these data sets to the BigCloneEval respected directories.
 
 BigCloneBench Data [here](https://1drv.ms/u/s!AhXbM6MKt_yLj_NwwVacvUzmi6uorA?e=eMu0P4)
 
 IJaDataset Data [here](https://1drv.ms/u/s!AhXbM6MKt_yLj_N15CewgjM7Y8NLKA?e=cScoRJ)
 
+
 **WorkFlow:**
-Detect Clones with NIL tool
 
-```$ ./detectClones -m 2000 -r ../nilRunner.sh -o nil_clones.csv```
-```java -jar ../NIL/build/libs/NIL-all.jar -s "$1" -bce 2>/dev/null```
+- After installing NIL and BigCloneEval in separate directories, I added the two data sets to their respective folders in BigCloneEval directory.
 
-Import clones for BigCloneEval
+- The first step was to run make in the main BigCloneEval directory. Then run /init inside the /commands directory of BigCloneEval.
+    ```
+    cd BigCloneEval
+    make
+    cd BigCloneEval/commands
+    ./init
+    ```
 
-```./importClones -t 1 -c nil_clones.csv```
+- After the initial install and set up, the ./detectTool in BigCloneEval was run to detect the clones with the NIL tool.
+    ```
+    ./registerTool -n "NIL" -d "NIL clone detector default configuration"
+    ```
 
-Evaluate clones with BigCloneEval
-
-```./evaluateTool -t 1 -o report.txt --st BOTH --mil 6 --mip 6 --mit 50```
-
+- After registering the NIL tool, we had to detect the clones using NIL. I first created a short script to path to the tool (which is attached) to run on each subdirectory automatically, rather than manually.
+    ```
+    ./detectClones -r ../nilRunner.sh -m 10000
+    ```
+    
+- Once ./detectClones was complete and the .csv was written, we used that .csv to import the clones for BigCloneEval
+    ```
+    ./importClones -t 1 -c nil_clones.csv
+    ```
+  
+- Lastly, run the ./evalualtTool, on the detected clones.
+    ```
+    ./evaluateTool -t 1 -o report.txt --st BOTH --mil 6 --mip 6 --mit 50
+    ```
 
 ## Any interventions performed:
 I continuously attempted to reproduce the output that the paper had for output:
