@@ -108,7 +108,7 @@ IJaDataset Data [here](https://1drv.ms/u/s!AhXbM6MKt_yLj_N15CewgjM7Y8NLKA?e=cSco
     
 - Once ./detectClones was complete and the .csv was written, we used that .csv to import the clones for BigCloneEval
     ```
-    ./importClones -t 1 -c nil_clones.csv
+    ./importClones -t 1 -c ../nil_clones.csv
     ```
   
 - Lastly, run the ./evalualtTool, on the detected clones.
