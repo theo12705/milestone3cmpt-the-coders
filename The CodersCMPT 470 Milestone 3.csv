@@ -1,0 +1,40 @@
+Tool ID,Tool Name,Environment Used,Settings used,Clone Types,Precision,Recall,Github Repo,TES Taxonomy,Original Recall,Original Precision,Result Comparison,Benchmark,Notes
+TheCoders_Tool1,NIL,macOS 24.6.0/java 21,default tool settings,"Type-1, 2, 3",N/A,0.003 | 0.01 | 0.04,https://github.com/kusumotolab/NIL/tree/master,TES C,0.99 | 0.96 | 0.93,0.94,Complete Opposite,BigCloneBench,Good precision; slight recall drop vs
+Thecoders_Tool2,CloneToolY,Windows 11/python.,,"Type1,2,3",0.85,0.45,,TES E,0.75,,Much lower recall,BCB-subset,Detected many false negatives (missed Type-3/4 clones)
+Thecoders_tool3,srcClone,Ubuntu 24.04,N/A,"Type1,2,3,4",N/A,N/A,N/A,TES D,1 (they claimed 100% no official value for recall),"Non numerical simply ""extremely low false positive""",Not executed,N/A,"There was no official artificacts, there existed a third party but it was non functional due to dependency chain issues and it's tooling being out of date. please read the README of Srcclone for more details."
+Thecoders_tool4,Csharp,Ubuntu 24.04,N/a,"Type-1,2,3,4",N/A,N/A,,TES C,0.917,0.91,No Output,N/A,"No artifacts existed, please review my readme for CCsharp for more information."
+Thecoders_Tool5,Gplag,Windows 11,N/A,"Type-1,2,3",N/A,N/A,N/A,TES D,,90,Not executed,N/A,"There was no official artificacts, there existed third party versions but none were functional due to dependency issues and out of date code. "
+Thecoders_Tool6,T-CORE,N/A,N/A,Type-4,N/A,N/A,N/A,TES-D,N/A,N/A,N/A,Apache Commons Math Library,"No artifacts existed, see TCORE/readme.md."
+,,,,,,,,,,,,,
+"TES-A (Executable): The tool executed successfully with
+ minimal effort following the authors’ original instructions.
+ No modifications or non-trivial interventions were neces-
+ sary beyond routine environment setup. Execution yielded
+ expected outputs on target benchmarks.",,,,,,,,,,,,,
+"TES-B (Executable with Intervention): The tool became
+ executable only after moderate intervention — such as
+ fixing compatibility issues, recovering missing dependen-
+ cies, correcting documentation inconsistencies, or resolving
+ build errors. Execution completed successfully after these
+ steps.",,,,,,,,,,,,,
+"TES-C (Partially Executable): The tool partially func-
+ tioned but failed to complete full evaluation. This includes
+ tools that executed only basic commands or smoke tests
+ but failed on realistic benchmarks, or tools that produced
+ incomplete or unreliable outputs. Substantial manual ef-
+ fort may have been required, yet full functionality was not
+ achieved.",,,,,,,,,,,,,
+"TES-D (Non-Executable): The tool could not be executed
+ despite best-effort attempts. This includes cases where (i)
+ no source code or binary artifact was found, (ii) the tool
+ failed irrecoverably during build or execution, or (iii) critical
+ components were missing with no path to recovery. Tools
+ in this category are considered irreproducible at the artifact
+ level.",,,,,,,,,,,,,
+"TES-E (Executed with Divergent Results): The tool exe-
+ cuted and produced outputs, but the results deviated sub-
+ stantially from those reported in the original paper. Such
+ divergence may be quantitative (e.g., lower recall/precision)
+ or qualitative (e.g., failure to detect key clone examples).
+ While the tool was runnable, its behavior was not repro-
+ ducible in terms of reported findings.",,,,,,,,,,,,,

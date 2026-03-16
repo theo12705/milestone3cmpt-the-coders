@@ -106,7 +106,8 @@ I continuously attempted to reproduce the output that the paper had for output:
 
 But I was unable to successfully reproduce that output, mine were way smaller. Completely opposite values:
 <img width="600" height="220" alt="Screenshot 2026-03-08 at 9 50 06 PM" src="https://github.com/user-attachments/assets/6f640f1a-e797-4d05-b76f-57578650c966" />
-I am unsure as to whether I missed a step while folling the NIL or BigCloneEval repositories. But after several unsuccessful attempts I am am unable to complete the evaluation.
+
+I am unsure as to whether I missed a step while following the NIL or BigCloneEval repositories. But after several unsuccessful attempts I am am unable to complete the evaluation.
 
 ## Execution outcome and TES classification: 
 NIL was fully executable as was BigCloneEval, but I was unable to reproduce the results in the paper in any way. Since I could not get the right results this will be classified as TES-C.
