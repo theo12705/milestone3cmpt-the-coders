@@ -4,10 +4,11 @@ Milestone 3 for team the coders
 GPLAG
 Ran by: Kayden and Theo
 How the official artifact was discovered:
-There is no existing official artifact of GPLAG. Information about paper for GPLAG: 
-https://scispace.com/pdf/gplag-detection-of-software-plagiarism-by-program-dependence-4cms55onj4.pdf
+There is no existing official artifact of GPLAG.
 
-I was not able to find any source code through Google searches or by researching the paper's authors.
+I searched Google Scholar for the paper using the keyword "GPLAG", and I found the paper at: https://dl.acm.org/doi/epdf/10.1145/1150402.1150522
+
+I looked through the website and could not find any links to a repo or source code. I then searched for "GPLAG" on Google, which showed more websites covering the original paper and a few links to repos contain third-part remakes. I searched for "GPLAG source code" on Google, which returned results including repo links to third-party remakes of GPLAG, more websites on GPLAG, and some repos and papers on JPLAG. I did a quick search, "JPLAG vs GPLAG" and found out that the projects are unrelated and use different techniques. I tried Google each of the author's names, followed by GPLAG, which resulted in deadends with no links to GPLAG. I then asked ChatPGT "can you find me source code for GPLAG", and it said that the official code was never released to the public. 
 
 I found 3 third-party remakes of GPLAG at the follow githubs:
 
