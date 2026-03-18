@@ -10,7 +10,7 @@ I searched Google Scholar for the paper using the keyword "GPLAG", and I found t
 
 I looked through the website and could not find any links to a repo or source code. I then searched for "GPLAG" on Google, which showed more websites covering the original paper and a few links to repos contain third-part remakes. I searched for "GPLAG source code" on Google, which returned results including repo links to third-party remakes of GPLAG, more websites on GPLAG, and some repos and papers on JPLAG. I did a quick search, "JPLAG vs GPLAG" and found out that the projects are unrelated and use different techniques. I tried Google each of the author's names, followed by GPLAG, which resulted in deadends with no links to GPLAG. I then asked ChatPGT "can you find me source code for GPLAG", and it said that the official code was never released to the public. 
 
-I found 3 third-party remakes of GPLAG at the follow githubs:
+I found 3 third-party remakes of GPLAG at the follow githubs using "GPLAG" and "GPLAG REPO" on both google and github:
 
 https://github.com/lyc8503/GPlag
 

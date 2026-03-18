@@ -21,16 +21,16 @@ This was found by simply googline 'CCsharp clone detector' and looking at the IE
 I went pretty deeply into googling this for artifacts but didn't find anything major. I looked
 at the main authors pages or personal websites on google by looking up the author's names on googles and their associated university.
 
-Here's what I found:
+Here's what I found by searching "Min Wang CCSharp" and looking up each author followed "University of China":
 Min wang:
 https://wmyolanda.github.io/
 https://www.semanticscholar.org/author/Min-Wang/143894230?sort=pub-date
 https://www.researchgate.net/profile/Min-Wang-264
 
-Pengcheng Wang:
+"Pengcheng Wang CCSharp":
 https://www.sustech.edu.cn/en/faculties/pengchengwang.html
 
-Yun Xu:
+"Yun Xu CCSharp":
 http://staff.ustc.edu.cn/~xuyun/
 
 
